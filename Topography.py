@@ -16,6 +16,15 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
 
     print('Creating network....')
 
+    # proc = await asyncio.create_subprocess_shell("""
+    #     sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
+    # """.format(7000), stdout=stdout, stderr=asyncio.subprocess.PIPE)
+    # controller_shells.append(proc)
+    # dir_ctrlr = net.addController('c0', port=7000)
+    # dir_switch = net.addSwitch('s0')
+    # dir_server = net.addHost('h0')
+    # net.addLink(dir_switch, dir_server)
+
     for org in range(1, num_orgs+1):
         # proc = await asyncio.create_subprocess_shell("""
         #     sudo /home/mininet/pox/pox.py org_controller openflow.of_01 --port={} \
@@ -59,17 +68,13 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         # print('Created host {} - {}'.format(h.name, h.IP()))
         print('Created a link between {} and {}'.format(s1.name, s2.name))
 
-    proc = await asyncio.create_subprocess_shell("""
-        sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
-    """.format(7000), stdout=stdout, stderr=asyncio.subprocess.PIPE)
-    controller_shells.append(proc)
-    dir_ctrlr = net.addController('c0', port=7000)
-    dir_switch = net.addSwitch('s0')
-    dir_server = net.addHost('h0')
-    net.addLink(dir_switch, dir_server)
-    for org in range(1, num_orgs+1):
-        s = net.getNodeByName('s%d_1'%org)
-        net.addLink(dir_switch, s)
+    
+    # s = net.getNodeByName('s1_1')
+    # net.addLink(dir_switch, s)
+    
+    # for org in range(1, num_orgs+1):
+    #     s = net.getNodeByName('s%d_1'%org)
+    #     net.addLink(dir_switch, s)
 
     return net, controller_shells
 
