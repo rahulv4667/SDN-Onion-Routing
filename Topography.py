@@ -8,6 +8,9 @@ import os
 
 from mininet.util import dumpNetConnections
 
+DIRECTORY_PORT = 8000
+SERVER_PORT = 8001
+
 async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
     os.chdir('/home/mininet/pox')
     net = Mininet(controller=RemoteController, switch=OVSSwitch, waitConnected=True)
@@ -71,7 +74,7 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
     
     # s = net.getNodeByName('s1_1')
     # net.addLink(dir_switch, s)
-    
+
     # for org in range(1, num_orgs+1):
     #     s = net.getNodeByName('s%d_1'%org)
     #     net.addLink(dir_switch, s)
@@ -81,13 +84,13 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
 def initNetwork(net: Mininet):
     net.build()
     
-    dir_ctrlr = net.getNodeByName('c0')
-    # dir_ctrlr.start()
-    dir_switch = net.getNodeByName('s0')
-    dir_switch.start([dir_ctrlr])
-    dir_server = net.getNodeByName('h0')
-    dir_server.cmd('python3 ../acn_project/TorUsingSDN/SocketProgramming/TorDirectory.py')
-    print('should have started directory service')
+    # dir_ctrlr = net.getNodeByName('c0')
+    # # dir_ctrlr.start()
+    # dir_switch = net.getNodeByName('s0')
+    # dir_switch.start([dir_ctrlr])
+    # dir_server = net.getNodeByName('h0')
+    # dir_server.cmd('python3 ../acn_project/TorUsingSDN/SocketProgramming/TorDirectory.py')
+    # print('should have started directory service')
     
     for ctrlr in net.controllers:
         # ctrlr.start()
@@ -98,10 +101,16 @@ def initNetwork(net: Mininet):
                 switch.start([ctrlr])
                 print('*** Started switch {} connected with controller {}'.format(switch.name, ctrlr.name))
         
-        
 
-        for host in net.hosts:
-            host.cmd("python3 ../acn_project/TorUsingSDN/SocketProgramming/TorServer.py")
+    dir_server = net.getNodeByName('h1_1_1')
+    dir_server.cmd("python3 ../acn_project/TorUsingSDN/SocketProgramming/TorDirectory.py %d &"%DIRECTORY_PORT)
+    print('should have started directory')        
+
+    for host in net.hosts:
+        host.cmd("python3 ../acn_project/TorUsingSDN/SocketProgramming/TorServer.py %d %d &"%(
+            SERVER_PORT,
+            DIRECTORY_PORT
+        ))
 
 
 def destroyNetwork(net: Mininet):
