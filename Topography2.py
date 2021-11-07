@@ -33,12 +33,9 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         #     sudo /home/mininet/pox/pox.py org_controller openflow.of_01 --port={} \
         #         samples.pretty_log log.level --DEBUG
         # """.format(start_port+org), stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-        # proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
-        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
         proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py org_controller forwarding.l2_learning openflow.of_01 --port={}
-        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
+            sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
+        """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
         controller_shells.append(proc)
         
 
