@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "sudo": true
+            "sudo": true,
+            "args": ["127.0.0.1", "8090"]
         }
     ]
 }

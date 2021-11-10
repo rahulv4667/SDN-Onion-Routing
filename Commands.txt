@@ -1,0 +1,4 @@
+xterm h1_1_1 h1_1_2 h1_1_3 h2_1_1 h2_1_2 h2_1_3 
+python3 TorUsingSDN/SocketProgramming/TorDirectory.py 10.0.0.1 8090
+python3 TorUsingSDN/SocketProgramming/TorServer.py 10.0.0.1 8090
+

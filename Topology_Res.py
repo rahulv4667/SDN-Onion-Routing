@@ -16,53 +16,31 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
     net = Mininet(controller=RemoteController, switch=OVSSwitch, waitConnected=True, autoSetMacs=True)
     start_port = 6633
     controller_shells = list()
-
     print('Creating network....')
 
-    # proc = await asyncio.create_subprocess_shell("""
-    #     sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
-    # """.format(7000), stdout=stdout, stderr=asyncio.subprocess.PIPE)
-    # controller_shells.append(proc)
-    # dir_ctrlr = net.addController('c0', port=7000)
-    # dir_switch = net.addSwitch('s0')
-    # dir_server = net.addHost('h0')
-    # net.addLink(dir_switch, dir_server)
-
     for org in range(1, num_orgs+1):
-        # proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py org_controller openflow.of_01 --port={} \
-        #         samples.pretty_log log.level --DEBUG
-        # """.format(start_port+org), stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-
         proc = await asyncio.create_subprocess_shell("""
-            sudo pox-gar-wip3/pox.py log.level --DEBUG samples.pretty_log forwarding.l2_learning  openflow.of_01 --port={}
-         """.format(start_port+org), stdout=sys.stdout, stderr=sys.stdout)
+            sudo pox-gar-wip3/pox.py log.level --DEBUG samples.pretty_log forwarding.l3_learning openflow.of_01 --port={}
+         """.format(start_port+org), stdout=sys.stdout, stderr=asyncio.subprocess.PIPE)
 
-        # proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py org_controller forwarding.l2_learning openflow.of_01 --port={}
-        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
-
-        # proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py forwarding.l3_learning openflow.of_01 --port={}
-        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
         controller_shells.append(proc)
         
 
         print('Created controller for {}'.format(org))
-        # c = net.addController(controller=RemoteController('c%d'%org, port=start_port+org))
+        
+        #c = net.addController('c%d'%org, port=start_port+org, ip=f"10.{org}.0.0/16")
         c = net.addController('c%d'%org, port=start_port+org)
-
-        host_id = 1
+        
         for switch in range(1, switches_per_org+1):
             s: OVSSwitch = net.addSwitch('s%d_%d'%(org, switch), ip=f"10.{org}.{switch}.0/24")
+            #s: OVSSwitch = net.addSwitch('s%d_%d'%(org, switch))
             print('Create switch {} - {}'.format(s.name, s.IP()))
 
             for host in range(1, hosts_per_switch+1):
                 h = net.addHost('h%d_%d_%d'%(org, switch, host), 
                     ip=f"10.{org}.{switch}.{host}/24"
-                    # mac=f"{host_id}"
                 )
-                host_id += 1
+                #h = net.addHost('h%d_%d_%d'%(org, switch, host))
                 net.addLink(s, h)
                 print('Created host {} - {}'.format(h.name, h.IP()))
                 print('Created a link between {} and {}'.format(s.name, h.name))
@@ -86,27 +64,10 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         # print('Created host {} - {}'.format(h.name, h.IP()))
         print('Created a link between {} and {}'.format(s1.name, s2.name))
 
-    
-    # s = net.getNodeByName('s1_1')
-    # net.addLink(dir_switch, s)
-
-    # for org in range(1, num_orgs+1):
-    #     s = net.getNodeByName('s%d_1'%org)
-    #     net.addLink(dir_switch, s)
-
     return net, controller_shells
 
 def initNetwork(net: Mininet):
     net.build()
-    
-    # dir_ctrlr = net.getNodeByName('c0')
-    # # dir_ctrlr.start()
-    # dir_switch = net.getNodeByName('s0')
-    # dir_switch.start([dir_ctrlr])
-    # dir_server = net.getNodeByName('h0')
-    # dir_server.cmd('python3 ../acn_project/TorUsingSDN/SocketProgramming/TorDirectory.py')
-    # print('should have started directory service')
-    
     for ctrlr in net.controllers:
         # ctrlr.start()
         print('*** Started controller {}'.format(ctrlr.name))
@@ -115,17 +76,6 @@ def initNetwork(net: Mininet):
             if switch.name.split('_')[0][1:] == ctrlr.name[1:]:
                 switch.start([ctrlr])
                 print('*** Started switch {} connected with controller {}'.format(switch.name, ctrlr.name))
-        
-
-    # dir_server = net.getNodeByName('h1_1_1')
-    # dir_server.cmd("python3 ../acn_project/TorUsingSDN/SocketProgramming/TorDirectory.py %d &"%DIRECTORY_PORT)
-    # print('should have started directory')        
-
-    # for host in net.hosts:
-    #     host.cmd("python3 ../acn_project/TorUsingSDN/SocketProgramming/TorServer.py %d %d &"%(
-    #         SERVER_PORT,
-    #         DIRECTORY_PORT
-    #     ))
 
 
 def destroyNetwork(net: Mininet):
@@ -151,7 +101,6 @@ if __name__ == "__main__":
     net, cshells = asyncio.run(createNetwork(num_orgs, num_switches, num_hosts))
     initNetwork(net)
     dumpNetConnections(net)
-    # net.pingAll()
     CLI(net)
     destroyNetwork(net)
 

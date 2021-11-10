@@ -1,0 +1,185 @@
+[[1m[1;36mcore                   [0m] [1mPOX 0.7.0 (gar) going up...[22m
+[[1m[1;36mcore                   [0m] [1mRunning on CPython (3.8.10/Sep 28 2021 16:10:42)[22m
+[[1m[1;36mcore                   [0m] [1mPlatform is Linux-5.11.0-38-generic-x86_64-with-glibc2.29[22m
+[[1m[1;33mversion                [0m] [1mSupport for Python 3 is experimental.[22m
+[[1m[1;36mopenflow.of_01         [0m] [1mListening on 0.0.0.0:6634[22m
+[[1m[1;32mcore                   [0m] [1mPOX 0.7.0 (gar) is up.[22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-01 1] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-01 1][22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-01 2] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-01 2][22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-02 3] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-02 3][22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-02 4] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-02 4][22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-03 5] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-03 5][22m
+[[1m[1;32mopenflow.of_01         [0m] [1m[00-00-00-00-00-03 6] connected[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1mConnection [00-00-00-00-00-03 6][22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:08.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:08.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:08.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:08.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:08.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:08.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:09.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:09.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:09.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.6 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:12.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.2 -> 00:00:00:00:00:12.6[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.5 -> 00:00:00:00:00:12.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.6 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:08.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:08.2 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.6 -> 00:00:00:00:00:09.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:12.4 -> 00:00:00:00:00:09.3[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.3 -> 00:00:00:00:00:12.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.2 -> 00:00:00:00:00:12.6[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.2 -> 00:00:00:00:00:07.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:01.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.5 -> 00:00:00:00:00:07.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:09.5 -> 00:00:00:00:00:12.4[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:01.4 -> 00:00:00:00:00:07.1[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.5[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.5 -> 00:00:00:00:00:01.2[22m
+[[1m[1;36mforwarding.l2_learning [0m] [1minstalling flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1[22m
