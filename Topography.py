@@ -13,7 +13,7 @@ SERVER_PORT = 8001
 
 async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
     os.chdir('/home/mininet/pox')
-    net = Mininet(controller=RemoteController, switch=OVSSwitch, waitConnected=True)
+    net = Mininet(controller=RemoteController, switch=OVSSwitch, waitConnected=True, autoSetMacs=True)
     start_port = 6633
     controller_shells = list()
 
@@ -33,11 +33,17 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         #     sudo /home/mininet/pox/pox.py org_controller openflow.of_01 --port={} \
         #         samples.pretty_log log.level --DEBUG
         # """.format(start_port+org), stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-        # proc = await asyncio.create_subprocess_shell("""
-        #     sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
-        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
+
         proc = await asyncio.create_subprocess_shell("""
+            sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
+         """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
+
+        # proc = await asyncio.create_subprocess_shell("""
         #     sudo /home/mininet/pox/pox.py org_controller forwarding.l2_learning openflow.of_01 --port={}
+        # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
+
+        # proc = await asyncio.create_subprocess_shell("""
+        #     sudo /home/mininet/pox/pox.py forwarding.l3_learning openflow.of_01 --port={}
         # """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
         controller_shells.append(proc)
         
@@ -46,11 +52,17 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         # c = net.addController(controller=RemoteController('c%d'%org, port=start_port+org))
         c = net.addController('c%d'%org, port=start_port+org)
 
+        host_id = 1
         for switch in range(1, switches_per_org+1):
-            s: OVSSwitch = net.addSwitch('s%d_%d'%(org, switch))
+            s: OVSSwitch = net.addSwitch('s%d_%d'%(org, switch), ip=f"10.{org}.{switch}.0/24")
             print('Create switch {} - {}'.format(s.name, s.IP()))
+
             for host in range(1, hosts_per_switch+1):
-                h = net.addHost('h%d_%d_%d'%(org, switch, host))
+                h = net.addHost('h%d_%d_%d'%(org, switch, host), 
+                    ip=f"10.{org}.{switch}.{host}/24"
+                    # mac=f"{host_id}"
+                )
+                host_id += 1
                 net.addLink(s, h)
                 print('Created host {} - {}'.format(h.name, h.IP()))
                 print('Created a link between {} and {}'.format(s.name, h.name))
