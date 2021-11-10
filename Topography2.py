@@ -12,7 +12,7 @@ DIRECTORY_PORT = 8000
 SERVER_PORT = 8001
 
 async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
-    os.chdir('/home/mininet/pox')
+    #os.chdir('/home/mininet/pox')
     net = Mininet(controller=RemoteController, switch=OVSSwitch, waitConnected=True)
     start_port = 6633
     controller_shells = list()
@@ -34,7 +34,7 @@ async def createNetwork(num_orgs, switches_per_org, hosts_per_switch):
         #         samples.pretty_log log.level --DEBUG
         # """.format(start_port+org), stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
         proc = await asyncio.create_subprocess_shell("""
-            sudo /home/mininet/pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
+            sudo pox/pox.py forwarding.l2_multi openflow.discovery openflow.of_01 --port={}
         """.format(start_port+org), stdout=stdout, stderr=asyncio.subprocess.PIPE)
         controller_shells.append(proc)
         
@@ -123,7 +123,7 @@ def destroyNetwork(net: Mininet):
 
 if __name__ == "__main__":
     setLogLevel('info')
-    f = open('/home/mininet/acn_project/netconf', 'r+')
+    f = open('netconf', 'r+')
     vals = f.readline()
     [num_orgs, num_switches, num_hosts] = vals.split()
     num_orgs = int(num_orgs.strip())
